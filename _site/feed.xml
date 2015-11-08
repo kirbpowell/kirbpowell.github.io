@@ -6,9 +6,26 @@
 </description>
     <link>http://kirbpowell.github.io/</link>
     <atom:link href="http://kirbpowell.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 07 Nov 2015 22:28:22 -0600</pubDate>
-    <lastBuildDate>Sat, 07 Nov 2015 22:28:22 -0600</lastBuildDate>
+    <pubDate>Sat, 07 Nov 2015 23:08:08 -0600</pubDate>
+    <lastBuildDate>Sat, 07 Nov 2015 23:08:08 -0600</lastBuildDate>
     <generator>Jekyll v3.0.0</generator>
+    
+      <item>
+        <title>Gitting up and running</title>
+        <description>&lt;p&gt;Alright!&lt;/p&gt;
+
+&lt;p&gt;This post will change shortly - this is a test&lt;/p&gt;
+</description>
+        <pubDate>Sat, 07 Nov 2015 17:04:00 -0600</pubDate>
+        <link>http://kirbpowell.github.io/programming/general/2015/11/07/gitting-up-and-running.html</link>
+        <guid isPermaLink="true">http://kirbpowell.github.io/programming/general/2015/11/07/gitting-up-and-running.html</guid>
+        
+        
+        <category>programming</category>
+        
+        <category>general</category>
+        
+      </item>
     
       <item>
         <title>My First Blog Post</title>
