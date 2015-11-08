@@ -21,6 +21,8 @@ Like most of you, I discovered that the popular solution to this problem was to 
 
 
 
+
+
 As you can probably tell, I like using Git and Github to do my coding. While this is true both at work
 and at home, this is the first time in a long while I've been using Linux at home to do anything related
 to github. This led to some fun little frustrations that I'm going to chronicle below for posterity, because
