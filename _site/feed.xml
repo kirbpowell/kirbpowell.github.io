@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kirby Powell</title>
+    <description>This is the personal blog of Kirby Powell. It&#39;s built in jekyll using the Daktilo theme. We&#39;ll see what this place ends up as!
+</description>
+    <link>http://kirbpowell.github.io/</link>
+    <atom:link href="http://kirbpowell.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 07 Nov 2015 22:28:22 -0600</pubDate>
+    <lastBuildDate>Sat, 07 Nov 2015 22:28:22 -0600</lastBuildDate>
+    <generator>Jekyll v3.0.0</generator>
+    
+      <item>
+        <title>My First Blog Post</title>
+        <description>&lt;p&gt;Hello everyone! This is, of course, my first post on this new blog!&lt;/p&gt;
+
+&lt;p&gt;I’ve got to be honest with you. I’m not 100% what I’ll be using this blog for, but its
+been fun setting up Jekyll, finding a theme I like, and messing with it to get a feel
+for how this whole ‘static-site generator’ thing works. So far, I like it!&lt;/p&gt;
+
+&lt;p&gt;As for what this blog could turn into, it could end up housing some of my old travel blog 
+posts from my the semester I spent in Prague back in 2014. It could be a place for me to 
+chronicle what I learn about CS and Programming Languages in my spare time. Who knows,
+I could even discover the joys of creative writing, or crochet.&lt;/p&gt;
+
+&lt;p&gt;Only time will tell, and I hope you’ll join me for the journey!&lt;/p&gt;
+</description>
+        <pubDate>Sat, 07 Nov 2015 16:11:00 -0600</pubDate>
+        <link>http://kirbpowell.github.io/general/2015/11/07/my-first-blog-post.html</link>
+        <guid isPermaLink="true">http://kirbpowell.github.io/general/2015/11/07/my-first-blog-post.html</guid>
+        
+        
+        <category>general</category>
+        
+      </item>
+    
+  </channel>
+</rss>
