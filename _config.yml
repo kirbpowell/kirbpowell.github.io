@@ -13,7 +13,7 @@ author:
   linkedin: https://www.linkedin.com/in/kirbypowell
   # disqus: your_disqus_username
 
-# google_analytics: 'UA-XXXXXXXX-X'
+google_analytics: 'UA-69804968-1'
 
 # Build settings
 markdown: redcarpet
