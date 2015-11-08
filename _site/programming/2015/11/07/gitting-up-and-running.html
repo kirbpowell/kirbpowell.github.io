@@ -8,7 +8,7 @@
 <meta name="description" content="This is the personal blog of Kirby Powell. It's built in jekyll using the Daktilo theme. We'll see what this place ends up as!
 ">
 <meta name="keywords" content="">
-<link rel="canonical" href="http://kirbpowell.github.io/programming/general/2015/11/07/gitting-up-and-running.html">
+<link rel="canonical" href="http://kirbpowell.github.io/programming/2015/11/07/gitting-up-and-running.html">
         
 
 
@@ -31,7 +31,7 @@
 <meta property="og:title" content="Gitting up and running">
 <meta property="og:description" content="This is the personal blog of Kirby Powell. It's built in jekyll using the Daktilo theme. We'll see what this place ends up as!
 ">
-<meta property="og:url" content="http://kirbpowell.github.io/programming/general/2015/11/07/gitting-up-and-running.html">
+<meta property="og:url" content="http://kirbpowell.github.io/programming/2015/11/07/gitting-up-and-running.html">
 <meta property="og:site_name" content="Kirby Powell">
 
         <link href='http://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
@@ -70,7 +70,7 @@
 </h1>
 
 <div class="content">
-    <p>Shortly after I bought myself a nice and cheap old ThinkPad to run Linux (<em>Ubuntu Mate 15.10</em>) that I could use to get some personal coding done, I ran into some issues using command line Git with Github. I&#39;ve got Two-Factor Authentication enabled on my Github account, a fact that those of you familiar with how that works on Github will recognize as causing some minor changes in how one logs in via the command line. After embarassingly forgetting that I had to log in using a <em>personal access token</em> when using the command line, I made another discovery; When using a personal access token on Linux, you&#39;ve got to re-enter that same token each and every time you would need to log in. Needless to say, this became incredibly annoying in quite quickly, and I set out for the internet in search of a way to make this process more seemless. I eventually pieced together what I needed to do, and below I lay out the steps I would&#39;ve taken, had I found them all in a sensical order. If this can save anyone some of the trouble I went through figuring all this out on my own (<em>even if that someone is future me</em>), then I&#39;ll consider this a well spent blog post. </p>
+    <p>Shortly after I bought myself a nice and cheap old ThinkPad to run Linux, (<em>Ubuntu Mate 15.10</em>) that I could use to get some personal coding done, I ran into some issues using command line Git with Github. I&#39;ve got Two-Factor Authentication enabled on my Github account, a fact that those of you familiar with how that works on Github will recognize as causing some minor changes in how one logs in via the command line. After embarassingly forgetting that I had to log in using a <em>personal access token</em> when using the command line, I made another discovery; When using a personal access token on Linux, you&#39;ve got to re-enter that same token each and every time you would need to log in. Needless to say, this became incredibly annoying in quite quickly, and I set out for the internet in search of a way to make this process more seemless. I eventually pieced together what I needed to do, and below I lay out the steps I would&#39;ve taken, had I found them all in a sensical order. If this can save anyone some of the trouble I went through figuring all this out on my own (<em>even if that someone is future me</em>), then I&#39;ll consider this a well spent blog post. </p>
 
 <p>Like I imagine most of you did, I discovered that a popular solution to this problem was to use a <code>.netrc</code> file with your personal access token included within, combined with git&#39;s credential-helper to do all of the token-remembering and login-lifting for you. </p>
 
@@ -80,7 +80,7 @@ login YOUR_GITHUB_USERNAME
 password YOUR_PERSONAL_ACCESS_TOKEN
 protocol https
 </code></pre></div>
-<p>Git will pick up on that, and use it to log you in whenever you push/pull/clone or whatever. <strong>However</strong>, you&#39;re also probably here because you&#39;re thinking &quot;<em>But Kirby, that&#39;s hatefully insecure. Leaving a password - even a revokable token - out in plain text like that gives me chills!</em>&quot;. And you&#39;re right, so that&#39;s why the next step in our adventure is to encrypt that file using GPG so that we can forget it exists and get backing to coding in blissful peace. </p>
+<p>Git will pick up on that, and use it to log you in whenever you push/pull/clone or whatever. <strong>However</strong>, you&#39;re also probably here because you&#39;re thinking &quot;<em>But Kirby, that&#39;s hatefully insecure. Leaving a password - even a revokable token - out in plain text like that gives me chills!</em>&quot;. And you&#39;re right, so that&#39;s why the next step in our adventure is to encrypt that file using GPG so that we can forget it exists and get backing to coding in peace. </p>
 
 <p>Our first step, if you haven&#39;t already done so, is to generate a GPG key that we can use to sign things. This is super easy to do, and the process itself is very self explanitory. Simply run:</p>
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>gpg --gen-key
@@ -100,12 +100,12 @@ protocol https
 <p>This allows git to use the <code>credential-netrc</code> command to find and make user of our newly encrypted file. Then all we need to do is run:</p>
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>git config -- global credential.helper /usr/share/doc/git/contrib/credential/netrc/git-credential-netrc
 </code></pre></div>
-<p>Which tells git to look for encrypted <code>.netrc</code> files and to decrypt them. At this point, we will want to run </p>
+<p>Which tells git to look for encrypted <code>.netrc</code> files and to decrypt them. At this point, we want to be sure to remember to run:</p>
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>rm .netrc
 </code></pre></div>
-<p>so that all that&#39;s left on our machine is the GPG encrypted version. </p>
+<p>So that all that&#39;s left on our machine is the GPG encrypted version of our credentials. You do need to remember that the first time you try to interact with Github through the commandline in a way that requires a log in, you will be prompted to provide your GPG password that you made when you initially generated your key. Don&#39;t forget it! Otherwise you&#39;ll have to start over again by creating a new <code>.netrc</code>, GPG key, and encrypted version. </p>
 
-<p>Now, you do need to remember that the first time you try to interact with Github through the commandline in a way that requires a log in, you will be prompted to provide your GPG password that you made when you initially generated your key. Don&#39;t forget it! Otherwise you&#39;ll have to start over again by creating a new <code>.netrc</code>, GPG key, and encrypted version. </p>
+<p>Now, you should be pushing, pulling, and cloning via the command line with impunity. I hope this helped!</p>
 
 </div>
 
