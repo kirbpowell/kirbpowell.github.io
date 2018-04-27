@@ -16,4 +16,4 @@ author:
 google_analytics: 'UA-69804968-1'
 
 # Build settings
-markdown: redcarpet
+markdown: kramdown
